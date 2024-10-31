@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #31cd5a, #d61b1b, #de13d4, #821b5a); 
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: white;
+}
+
+.stopwatch-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#time-display {
+    font-size: 3rem;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+.controls button {
+    padding: 10px 25px;
+    margin: 10px 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    background-color: #28a745;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #218838;
+}
+
+.controls button:active {
+    transform: scale(0.95);
+}
+
+#laps {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#laps li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: #f8f9fa;
+    font-size: 1.2rem;
+}
+
+#laps li:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
